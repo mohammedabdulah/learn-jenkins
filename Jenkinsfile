@@ -7,9 +7,13 @@ pipeline {
     environment {
         GREETING = 'Hello Jenkins'
     }
+    // options {
+    //     timeout (time :1 , units: 'HOURS')
+    // }
     options {
-        timeout (time :1 , units: 'SECONDS')
+        ansicolor ('xterm')
     }
+    
     parameters {
         string (name: 'PERSON' , defaultValue : 'Mr.Jenkins' , description: 'who are you')
         text (name: 'BIOGRAPHY' , defaultValue: '' , description: 'write something')
