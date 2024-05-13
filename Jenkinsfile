@@ -42,8 +42,10 @@ pipeline {
             }
             stage ('EXAMPLE') {
                 steps{
+                    sh """
                     echo "hello $(params.PERSON)"
                     echo "biography : $(params.BIOGRAPHY)"
+                    """
                 }
             }
         }
