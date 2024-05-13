@@ -10,9 +10,9 @@ pipeline {
     // options {
     //     timeout (time :1 , units: 'HOURS')
     // }
-    options {
-        ansicolor ('xterm')
-    }
+    // options {
+    //     ansicolor ('xterm')
+    // }
     
     parameters {
         string (name: 'PERSON' , defaultValue : 'Mr.Jenkins' , description: 'who are you')
